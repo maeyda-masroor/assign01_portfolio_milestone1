@@ -1,98 +1,72 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
+.Nav{
+    background: #63d471;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem calc((100vw - 1000px) / 2);
+    z-index: 12;
+}
+.NavLinks{
+    color: #808080;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: black;
-    font-size: 18px;
-  }
-  
-  /* navbar */
-  .navbar {
-    background-color: aliceblue;
-    padding: 10px 20px;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    &.active {
+        color: #000000;
+    }
+}
+
+.Bar{
+    display: none;
+    color: #808080;
+    @media screen and (max-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 75%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+.NavMenu{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    min-height: 70px;
-  }
-  
-  
-  /* logo  */
-  .logo {
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  
-  /* ul  */
-  .navMenu {
+    margin-right: -24px;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+}
+.NavBtn {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 60px;
-  }
-  
-  /* media queries */
-  
-  @media screen and (max-width: 780px){
-    
-    /* hamburger */
-    .hamburger {
-      display: block;
-      cursor: pointer;
+    margin-right: 24px;
+    /* Third Nav */
+    /* justify-content: flex-end;
+  width: 100vw; */
+    @media screen and (max-width: 768px) {
+        display: none;
     }
-  
-    .bar {
-          background-color: #120f0b;
-          width: 20px;
-          height: 3px;
-          display: block;
-          margin: 5px;
-          -webkit-transition: 0.3s ease-in-out;
-          transition: 0.3s ease-in-out;
-      }
-  
-    /* adding active class to the bars  */
-    .hamburger.active .bar:nth-child(2){
-      opacity: 0;
+}
+.NavBtnLink{
+    border-radius: 4px;
+    background: #808080;
+    padding: 10px 22px;
+    color: #000000;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    /* Second Nav */
+    margin-left: 24px;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        color: #808080;
     }
-    .hamburger.active .bar:nth-child(1){
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-      transform: translateY(-8px) rotate(-45deg);
-    }
-  
-  
-    /* navMenu */
-  
-    .navMenu{
-      position: absolute;
-      flex-direction: column;
-      gap: 0;
-      top: 70px;
-      left: -100%;
-      text-align: start;
-      width: 100%;
-      transition: 0.7s ease-in-out;
-      background-color: aliceblue;
-      padding: 10px;
-    }
-  
-    .navMenu.active{
-      left: 0;
-    }
-  
-    .navMenu li {
-      margin: 16px 0;
-    }
-  }
+}
