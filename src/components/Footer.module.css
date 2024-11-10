@@ -1,14 +1,9 @@
-.Navbar{
+.Footer{
     background-color: #FF8000;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-    color: #FFFFFF;
 }
 .links{
     display: flex;
@@ -18,7 +13,7 @@
 
 ul li{
     list-style: none;
-    margin: 0 20px;
+    margin: 0 60px;
     display: inline;
 }
 ul li a{
@@ -27,5 +22,3 @@ ul li a{
     font-size: 18px;
 
 }
-
-

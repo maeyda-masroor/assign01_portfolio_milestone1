@@ -1,8 +1,11 @@
-import style from './Footer.module.css';
+import style from './Navbar.module.css';
 import { Link } from 'react-router-dom';
-export default function Footer(){
+export default function Navbar1(){
     return (
-        <div className={style.Footer}>
+        <div className={style.Navbar}>
+            <div className={style.logo}>
+                MY PROFILE
+            </div>
             <div className={style.links}>
                 <ul>
                     <li><Link to ="/">Home</Link></li>

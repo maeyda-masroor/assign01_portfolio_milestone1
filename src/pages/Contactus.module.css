@@ -1,0 +1,70 @@
+.About{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Div1{
+    flex: 1;
+    height: 500px;
+    background-color: RED;
+    padding: 20px;
+}
+.Div2{
+    flex: 1;
+    height: 500px;
+    background-color: GREEN;
+    padding: 20px;
+}
+@media screen and (min-width: 400px) {
+    .About {
+        display: flex;
+        padding: 4px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .About {
+        display: flex;
+        flex-direction: row;
+     }
+}
+input[type=text], select, textarea {
+    width:50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 4px;
+    display: inline-block;
+    font-size: 20px;
+  }
+  
+  input[type=submit] {
+    background-color: orange;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
